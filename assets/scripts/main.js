@@ -34,7 +34,7 @@ navItem4.addEventListener("click", () => {
 
 function yousendit(){
     if(document.getElementById('yousendit').checked){
-        window.location='';
+        window.location='https://upc-pre-202302-iotheraphy-si572-sw71.github.io/IoTheraphy-LandingPage/index-spanish.html';
         return false;
     }
     return true;
@@ -43,7 +43,7 @@ function yousendit(){
 
 function yousendit2(){
     if(document.getElementById('yousendit2').checked){
-        window.location='';
+        window.location='https://upc-pre-202302-iotheraphy-si572-sw71.github.io/IoTheraphy-LandingPage/';
         return false;
     }
     return true;

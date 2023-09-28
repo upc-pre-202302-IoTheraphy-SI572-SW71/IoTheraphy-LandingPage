@@ -1,0 +1,1476 @@
+* {
+    margin: 0;
+    font-family: ibm-plex-sans, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+li, nav
+{
+    list-style: none;
+
+}
+
+ul {
+    list-style-type: disc; /* Agrega viñetas en forma de puntos sólidos */
+
+}
+
+a
+{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+
+a.btn
+{
+    color: #FFFFFF;
+    border-radius: inherit;
+    text-transform: capitalize;
+    background-color: #002A78;
+    font-weight: 800;
+    text-align: center;
+    padding: 10px;
+    border: none;
+
+}
+a.btn:hover
+{
+    background-color: yellow;
+}
+
+
+
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    width: 1200px;
+    display: flex;
+    padding-left: 50px;
+}
+
+
+/*Header Section*/
+
+header
+{
+
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px 0;
+    background-color:  #007AF0;
+}
+
+header .name
+{
+    color: white;
+    font-size: 34px;
+    letter-spacing: 1.25px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+header .nav-header
+{
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-header .logo
+{
+    margin-right: 20px;
+}
+
+.logo img
+{
+    width: 100px;
+    height: 100px;
+
+
+}
+
+.logo2 img{
+    width: 200px;
+    height: 20px;
+}
+
+.nav-toggle {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 5px;
+    line-height: 60px;
+    cursor: pointer;
+
+    display: none;
+}
+
+header nav
+{
+    display: flex;
+}
+
+header nav li
+{
+    margin: 0 15px;
+    width: max-content;
+    font-size: 20px;
+    color:  white;
+}
+
+.idioma
+{
+    text-align: right;
+    margin-top: 0px;
+}
+.en
+{
+    color:  white;
+
+}
+.es{
+    color:  white;
+
+}
+
+.check
+{
+    position: relative;
+    width: 50px;
+    height: 18px;
+
+}
+.check:before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    background: white;
+    border-radius: 25px;
+}
+
+.check:after{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #003A79;
+    transition: 0.1s;
+    border: 2px solid white;
+    box-sizing:  border-box;
+    border-radius: 25px;
+}
+
+.check:checked:after
+{
+    left: 25px;
+    border: 2px solid white;
+}
+
+.check:checked:before
+{
+    background: white;
+}
+
+
+@media (max-width: 800px)   {
+    header {
+        padding: 10px 30px;
+    }
+}
+
+@media (max-width: 1300px)  {
+
+    header h2 {
+        margin-bottom: 10px;
+    }
+
+    a
+    {
+        font-size: 20px;
+    }
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu
+    {
+        border: 1px solid #002A78;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        background-color: #003A79;
+        position: fixed;
+        left: 0;
+        top: 110px;
+        width: 100%;
+        line-height: 3;
+
+        height: calc(100% - 95px);
+        overflow-y: auto;
+
+        left: 100%;
+        transition: 0.1s;
+    }
+
+    .nav-menu_visible
+    {
+        left: 0;
+
+    }
+
+    header .nav-header
+    {
+        display: flex;
+        align-items: center;
+    }
+    header .nav-header h2
+    {
+        color: white;
+        font-size: 28px;
+        letter-spacing: 1.25px;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    header .nav-header
+    {
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+/*HERO SECTION*/
+/* Estilo para la sección hero completa */
+.hero-section {
+    background-image: url("../../assets/images/hero_image.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 45vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinea los elementos a la izquierda */
+}
+
+/* Ajusta el estilo de la tarjeta */
+.hero-card{
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    text-align: left;
+    width: 780px;
+
+}
+
+.card-title {
+    font-size: 60px;
+    font-weight: 800;
+    margin: 0;
+    color: #000000;
+}
+
+.card-description {
+    font-size: 20px;
+    font-weight: normal;
+    color: #000000;
+    margin-top: 10px;
+}
+
+.btn-rectangular {
+    display: inline-block;
+    padding: 24px 60px;
+    background-color: #007AF0;
+    color: #ffffff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    font-size: 20px;
+    margin-right: 68%;
+}
+
+.btn-rectangular:hover {
+    background-color: #0055A4; /* Cambia el color de fondo al acercar el mouse */
+    opacity: 0.6; /* Reduce la opacidad al acercar el mouse */
+}
+
+
+/* Consulta de medios para tabletas */
+@media (max-width: 800px) and (min-width:200px) {
+    .hero-card {
+        padding: 10px; /* Ajusta el relleno para dispositivos más pequeños */
+        width: 300px;
+        margin-left: 50px;
+    }
+
+    .card-title {
+        font-size: 24px; /* Tamaño de fuente más pequeño para tabletas */
+    }
+
+    .card-description {
+        font-size: 14px; /* Tamaño de fuente más pequeño para tabletas */
+    }
+
+    .btn-rectangular {
+        padding: 12px 30px; /* Ajusta el padding para tabletas */
+        font-size: 10px; /* Tamaño de fuente más pequeño para tabletas */
+        width: 60px;
+    }
+}
+
+/* Consulta de medios para smartphones */
+@media (max-width: 1300px) and (min-width:800px) {
+    .hero-card {
+        padding: 10px; /* Ajusta el relleno para dispositivos más pequeños */
+        width: 450px;
+        margin-left: 50px;
+    }
+
+    .card-title {
+        font-size: 25px; /* Tamaño de fuente más pequeño para smartphones */
+    }
+
+
+    .card-description {
+        font-size: 14px; /* Tamaño de fuente más pequeño para smartphones */
+    }
+
+    .btn-rectangular {
+        padding: 10px 24px; /* Ajusta el padding para smartphones */
+        font-size: 12px; /* Tamaño de fuente más pequeño para smartphones */
+    }
+}
+
+/*Services Section*/
+
+#patient-services .container{
+    background: linear-gradient(to bottom, #659ebc 0%, #659ebc 0%, #ffffff 2%); /* Ajusta las posiciones para el degradado */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #cfdff0; /* Establece el color de fondo de respaldo */
+}
+
+#patient-services .titles{
+    text-align: center;
+}
+
+#patient-services .titles h1{
+    margin-top: 60px;
+    font-weight: bold;
+    color: #007AF0;
+}
+
+#patient-services .titles h2{
+    font-weight: bold;
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+
+#patient-services .cards-container{
+    max-width: 1500px;
+    border: 4px solid #007AF0; /* Añade un borde de 2 píxeles de ancho y color blanco */
+    border-radius: 15px; /* Aplica bordes redondeados de 20 píxeles */
+    padding: 30px; /* Añade un espacio interno para separar las tarjetas del borde */
+    margin-top: 20px;
+    margin-bottom: 170px;/* Agrega un margen superior para separar los títulos de las tarjetas */
+    display: flex;
+}
+
+#patient-services .card {
+    display: flex; /* Usa flexbox para organizar el contenido */
+    border-radius: 5px; /* Aplica bordes redondeados */
+    padding: 10px; /* Añade un espacio interno para separar los elementos */
+    margin: 29px; /* Agrega margen para separar las tarjetas */
+    align-items: center; /* Alinea verticalmente los elementos */
+    width: 600px;
+    height: 200px;
+    transition: transform 0.3s ease;
+    background-color: #ffffff;
+    border: 1px solid #000000;/* Agregamos una transición de 0.3 segundos en la propiedad 'transform' */
+}
+
+#patient-services .card:hover {
+    transform: scale(1.05); /* Al hacer hover, la tarjeta se agrandará un 5% */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Agregamos una sombra para dar un efecto de elevación */
+}
+
+#patient-services .card-image {
+    flex: 1; /* El espacio disponible se divide entre la imagen y el contenido */
+    display: grid;
+    place-items: center;
+}
+
+#patient-services .card-image img {
+    width: 60%; /* La imagen no se desbordará de la tarjeta */
+    height: 80%; /* Mantiene la proporción de la imagen */
+    margin: auto;
+
+}
+
+#patient-services .card-content {
+    flex: 2; /* El espacio disponible se divide entre el contenido y la imagen */
+
+}
+
+#patient-services .card-title {
+    font-size: 22px; /* Estilo del título */
+    margin-right: 56px;
+
+}
+
+#patient-services .card-description {
+    font-size: 16px;
+    margin-right: 25px;/* Estilo de la descripción */
+
+}
+
+
+
+.feature-title {
+    text-align: left;
+}
+
+
+h2
+{
+    font-weight: bold;
+    font-size: 48px;
+}
+
+section h1.title
+{
+
+    text-transform: capitalize;
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 50px;
+    color: #3C5BA9;
+}
+
+.services {
+    height: 100%;
+    display: flex;
+    margin-right: 48px;
+    margin-left: 48px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+.services h2{
+    font-size: 32px;
+    color: #3C5BA9;
+}
+
+
+.services h3{
+    font-size:  30px;
+    margin-bottom: 12px;
+    font-weight:bold;
+    color: #3C5BA9;
+}
+.feature1-image img{
+    margin-right: 7vw;
+    margin-left: 3.5vw;
+    height:25vw
+}
+.feature-text{
+    text-align: left;
+}
+
+
+.feature-services-begin-rigth {
+    margin-right: 10vw;
+    margin-left: 3.5vw;
+}
+
+.feature1-services {
+    margin-top: 1vw;
+    display: flex;
+    align-items: center;
+}
+.feature2-services {
+    margin-top: 10vw;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-left: 3.1vw;
+}
+
+.feature2-image img{
+    margin-right: 3vw;
+    margin-left: 10vw;
+    height:25vw
+}
+
+/* Estilos para tabletas (ancho de pantalla entre 800px y 1300px) */
+@media screen and (max-width: 1300px) and (min-width: 800px) {
+    #patient-services .cards-container {
+        flex-direction: column; /* Cambia a disposición de columna en tabletas */
+        max-width: 80%; /* Reduzca el ancho máximo */
+        margin-left: auto;
+        margin-right: auto; /* Centra la sección */
+
+    }
+
+    #patient-services .card {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        max-width: none; /* Restablece el ancho máximo */
+        margin: 20px 0; /* Cambia el margen vertical */
+    }
+}
+
+/* Estilos para smartphones (ancho de pantalla menor a 800px) */
+@media screen and (max-width: 800px) {
+    #patient-services .titles h1 {
+        font-size: 32px; /* Tamaño de fuente más pequeño para smartphones */
+        margin-top: 40px; /* Ajusta el margen superior */
+    }
+
+    #patient-services .titles h2 {
+        font-size: 28px; /* Tamaño de fuente más pequeño para smartphones */
+        margin-bottom: 30px; /* Ajusta el margen inferior */
+    }
+
+    #patient-services .cards-container {
+        flex-direction: column; /* Cambia a disposición de columna en smartphones */
+        max-width: 80%; /* Reduzca el ancho máximo */
+        margin-left: auto;
+        margin-right: auto; /* Centra la sección */
+    }
+
+    #patient-services .card {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        max-width: none; /* Restablece el ancho máximo */
+        margin: 20px 0 ; /* Cambia el margen vertical */
+    }
+
+    #patient-services .card-content {
+        text-align: center; /* Centra el contenido en smartphones */
+    }
+
+    #patient-services .card-title {
+        font-size: 22px; /* Tamaño de fuente más pequeño para smartphones */
+    }
+
+    #patient-services .card-description {
+        font-size: 16px; /* Tamaño de fuente más pequeño para smartphones */
+    }
+}
+
+/*About Product**/
+.about-product{
+    background-color: #0069D0;
+    height: 900px;
+}
+
+.about-product .right{
+    min-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-product .right img{
+    max-width: 500px;
+}
+
+#about-product .left{
+    display: flex;
+    align-items: center;
+    color: white;
+    min-width: 20%;
+    margin-left: 1vw;
+    margin-right: 10vw;
+}
+
+#about-product .left .title{
+    font-size: 3vw;
+    font-weight: 700;
+    line-height: 1.1em;
+}
+
+#about-product .left p{
+    margin: 1.5vw 0px;
+    font-size: 1.8vw;
+}
+
+
+#about-product .btn-rectangular{
+
+    background-color: rgba(207, 223, 240, 0.47);
+    color: #ffffff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 110px;
+    font-size: 20px;
+}
+
+/* Estilos para tabletas (ancho de pantalla entre 800px y 1300px) */
+@media screen and (max-width: 1300px) and (min-width: 800px) {
+    .about-product{
+        height: 700px;
+    }
+
+    #about-product .left {
+        min-width: 40%; /* Ajusta el ancho mínimo del lado izquierdo */
+        margin-right: 5vw; /* Reduce el margen derecho */
+    }
+
+    #about-product .left .title {
+        font-size: 45px; /* Tamaño de fuente más pequeño para tabletas */
+    }
+
+    #about-product .left p {
+        font-size: 18px; /* Tamaño de fuente más pequeño para tabletas */
+    }
+
+    #about-product .btn-rectangular {
+        width: 90px; /* Reduzca el ancho del botón rectangular */
+        font-size: 16px; /* Tamaño de fuente más pequeño para tabletas */
+    }
+
+    #about-product .right {
+        min-width: 50%; /* Ajusta el ancho mínimo del lado derecho */
+    }
+
+    #about-product iframe {
+        height: 400px; /* Ajuste la altura del iframe */
+        width: 500px;
+        margin-right: 80px;
+
+    }
+}
+
+/* Estilos para smartphones (ancho de pantalla menor a 800px) */
+@media screen and (max-width: 800px) {
+
+    .about-product{
+        height: 630px;
+    }
+
+    #about-product .left {
+        min-width: 80%; /* Ajusta el ancho mínimo del lado izquierdo para smartphones */
+        margin-right: 0; /* Elimina el margen derecho */
+    }
+
+    #about-product .left .title {
+        font-size: 35px; /* Tamaño de fuente más pequeño para smartphones */
+    }
+
+    #about-product .left p {
+        font-size: 19px; /* Tamaño de fuente más pequeño para smartphones */
+        margin-right: 50px;
+    }
+
+    #about-product .btn-rectangular {
+        width: 80px; /* Reduzca el ancho del botón rectangular para smartphones */
+        font-size: 14px; /* Tamaño de fuente más pequeño para smartphones */
+    }
+
+    #about-product .right {
+        min-width: 100%; /* Ajusta el ancho mínimo del lado derecho para smartphones */
+    }
+
+    #about-product .box{
+        display: table-column;
+    }
+
+    #about-product iframe {
+        align-self: center;
+        margin-top: 50px;
+        height: 200px; /* Ajuste la altura del iframe para smartphones */
+        width: 100%; /* Ocupa todo el ancho disponible */
+        max-width: none; /* Restablece el ancho máximo */
+    }
+}
+
+/*Physiotherapist section**/
+
+#physiotherapist-services {
+    background-color: rgb(255, 255, 255);
+    height: 850px;
+    padding-top: 110px;
+}
+
+#physiotherapist-services .right{
+    min-width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+#physiotherapist-services .right img{
+    margin-right: 15%;
+    margin-left: 10%;
+    height: 600px;
+    border-radius: 40px;
+}
+
+#physiotherapist-services .left{
+
+    display: flex;
+    color: black;
+    min-width: 45%;
+
+}
+
+#physiotherapist-services .left .title{
+
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.1em;
+}
+
+
+
+#physiotherapist-services .btn-rectangular{
+
+    background-color: #007AF0;
+    color: #ffffff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 100px;
+    margin-left: 60px;
+
+}
+
+#physiotherapist-services .btn-rectangular:hover {
+    background-color: #0055A4; /* Cambia el color de fondo al acercar el mouse */
+    opacity: 0.6; /* Reduce la opacidad al acercar el mouse */
+}
+
+
+
+
+/* Estilos para los elementos expandibles */
+.expanding-section {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.expanding-item {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+
+.expanding-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinea verticalmente el contenido en el centro */
+
+}
+
+.expand-button {
+    background-color: #007AF0;
+    color: #ffffff;
+    border-radius: 50%;
+    border: none;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    cursor: pointer;
+
+}
+
+
+.expand-button:hover {
+    background-color: #0055A4; /* Cambia el color de fondo al acercar el mouse */
+    opacity: 0.6; /* Reduce la opacidad al acercar el mouse */
+}
+
+.expanding-content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: rgba(207, 223, 240, 0.47); /* Establece el color de fondo deseado */
+}
+
+.expanded {
+    max-height: 200px; /* Establece la altura máxima deseada para la expansión */
+    margin-top: 20px;
+    padding: 25px;
+}
+
+#physiotherapist-services li{
+    list-style: inherit;
+}
+
+/* Estilos para pantallas grandes (más de 1300px) */
+@media (max-width: 1300px) and (min-width: 800px) {
+
+    #physiotherapist-services{
+        height: 780px;
+    }
+
+    #physiotherapist-services .box{
+        width: 380px;
+
+    }
+
+    #physiotherapist-services .container {
+        flex-direction: column;
+        align-items: start;
+        justify-content: left;
+    }
+
+    #physiotherapist-services .right {
+        min-width: 100%;
+        margin-left: 300px;
+    }
+
+    #physiotherapist-services .right img {
+        width: 430px; /* Ajusta el tamaño de la imagen */
+        height: 600px; /* Mantén la proporción */
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+    }
+
+    #physiotherapist-services .left {
+        min-width: 100%;
+        text-align: start;
+    }
+
+    #physiotherapist-services .left .title{
+        font-size:45px;
+
+    }
+
+    #physiotherapist-services .btn-rectangular {
+        margin-left: 0; /* Elimina el margen izquierdo */
+    }
+
+    /* Estilos para los elementos expandibles */
+    .expanding-item {
+        width: 100%; /* Ajusta el ancho de los elementos expandibles */
+        padding: 10px;
+    }
+
+    .expand-button {
+        margin-left: auto; /* Mueve el botón al extremo derecho */
+
+    }
+
+    .feature-title{
+        font-size: 18px;
+    }
+
+    .expanding-content{
+        font-size: 14px;
+    }
+}
+
+/* Estilos para pantallas pequeñas (menos de 800px) */
+@media (max-width: 800px) and (min-width: 200px) {
+
+    #physiotherapist-services{
+        height: 1200px;
+    }
+
+    #physiotherapist-services .box{
+        width: 500px;
+        display: table-column;
+        align-content: start;
+    }
+
+    #physiotherapist-services .container {
+        align-items: center;
+        justify-content: center;
+    }
+    #physiotherapist-services .right{
+
+    }
+
+    #physiotherapist-services .right img {
+        margin-top: 50px;
+        width: 300px; /* Ajusta el tamaño de la imagen al ancho de la pantalla */
+        height: 350px;
+        border-radius: 20px;
+
+    }
+
+    #physiotherapist-services .left {
+      width: 300px;
+    }
+
+    #physiotherapist-services .left .title{
+        font-size:35px;
+
+    }
+
+
+    #physiotherapist-services .btn-rectangular {
+
+        width: 70px;
+        height:20px;
+        font-size: 14px;
+
+    }
+
+    /* Estilos para los elementos expandibles */
+    .expanding-item {
+        width: 400px; /* Ajusta el ancho de los elementos expandibles */
+        padding: 10px;
+    }
+
+    .expand-button {
+        margin-left: auto; /* Mueve el botón al extremo derecho */
+
+    }
+}
+
+
+/*Testimonials*/
+
+#testimonials h1 {
+    text-align: center;
+    padding-top: 60px;
+    margin-bottom: 40px;
+    color: #007AF0;
+    font-weight: bold;
+    font-size: 40px;
+}
+#testimonials {
+    text-align: center;
+    background-color: #f2f2f2;
+    height: 900px;
+}
+
+#testcards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.testimonial-card {
+    background-image: url("../../assets/images/review-background.png");
+    background-size: 80px;
+    background-repeat: no-repeat;
+    background-position-x: 40px;
+    background-position-y: 20px;
+    width: calc(40% - 10px);
+    height: 250px;/* Dos columnas en pantalla grande, con espacio entre ellas */
+    margin: 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.testimonial-content {
+    position: absolute;
+    left: 35px; /* Alinea el texto a 40px desde el borde izquierdo */
+    top: 90px;
+    margin-right: 30px;
+}
+
+.testimonial-content p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.testimonial-name {
+    font-weight: bold;
+    margin-right: 310px;
+    color: #007AF0;
+}
+
+.testimonial-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Estilos para pantallas grandes (más de 1300px) */
+@media (max-width: 1300px) and (min-width: 800px) {
+    #testimonials h1 {
+        font-size: 36px; /* Reduce el tamaño del título */
+        margin-top: 40px; /* Ajusta el espacio superior */
+        margin-bottom: 60px;
+    }
+    #testimonials {
+        height: 700px;
+    }
+
+    .testimonial-card {
+        width: calc(50% - 100px); /* Dos columnas en pantalla grande */
+        height: 200px;
+        margin: 10px; /* Espacio entre las tarjetas */
+    }
+
+    .testimonial-content {
+        position: static; /* Coloca el contenido en su posición original */
+        margin-top: 70px;
+        margin-left: 50px;
+        text-align: center; /* Centra el texto */
+    }
+
+    .testimonial-content p {
+        font-size: 16px; /* Reduce el tamaño del texto */
+        margin-bottom: 10px;
+    }
+
+    .testimonial-name {
+        font-weight: bold;
+        margin: 0 auto; /* Centra el nombre horizontalmente */
+        color: #007AF0;
+    }
+
+    .testimonial-avatar {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Estilos para pantallas pequeñas (menos de 800px) */
+@media (max-width: 800px) and (min-width: 200px) {
+    #testimonials h1 {
+        font-size: 28px; /* Reduce aún más el tamaño del título */
+        margin-top: 20px; /* Ajusta el espacio superior */
+        margin-bottom: 40px;
+    }
+
+    .testimonial-card {
+        width: calc(100% - 20px); /* Una columna en pantalla pequeña */
+        height: 150px; /* Ajusta la altura automáticamente */
+        margin-bottom: 20px;
+    }
+
+    .testimonial-content {
+        position: static; /* Coloca el contenido en su posición original */
+        margin-top: 60px;
+        margin-left: 50px;
+        text-align: center; /* Centra el texto */
+    }
+
+    .testimonial-content p {
+        font-size: 16px; /* Reduce el tamaño del texto */
+        margin-bottom: 10px;
+    }
+
+    .testimonial-name {
+        font-weight: bold;
+        margin: 0 auto; /* Centra el nombre horizontalmente */
+        color: #007AF0;
+    }
+
+    .testimonial-avatar {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+/*About the TEam*/
+#about-the-team {
+    background-color: #007AF0;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#about-the-team h1{
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+}
+
+#about-the-team h2{
+    font-size: 25px;
+    color: white;
+    font-weight: normal;
+    margin-top: 20px;
+}
+
+.team-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.team-card {
+    min-width:258px;
+    max-width:258px;
+    width: calc(33.33% - 250px);
+    height: 350px;
+    margin: 20px;
+    background-color: #ffffff;
+    border-radius: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+
+.team-avatar {
+    width: 227px;
+    height: 200px;
+    padding: 15px;
+    border-radius: 20%;
+}
+
+.team-name {
+    font-weight: bold;
+    margin: 0 20px;
+    color: #5b5b5b;
+}
+
+.team-position {
+    margin: 0 20px;
+    color: #007AF0;
+    font-weight: bolder;
+}
+
+.team-social-icons {
+    margin: 10px 20px ;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+    cursor:pointer;
+}
+
+
+#about-team iframe {
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    margin-left: 8%;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+/* Estilos para pantallas grandes (más de 1300px) */
+@media (max-width: 1300px) and (min-width: 800px) {
+    #about-the-team h1 {
+        font-size: 36px; /* Reduce el tamaño del título */
+    }
+
+    .team-card {
+        min-width:272px;
+        max-width:272px;
+        width: calc(25% - 20px); /* Cuatro columnas en pantalla grande */
+        height: 330px;
+    }
+
+    .team-avatar {
+        width: 240px; /* Reduce el tamaño de las imágenes de perfil */
+        height: 200px;
+    }
+
+    .team-name,
+    .team-position {
+        font-size: 16px; /* Reduce el tamaño del texto */
+        margin-left: 20px;
+    }
+
+    .team-social-icons {
+        margin-left: 20px;
+    }
+
+    .social-icon {
+        width: 20px; /* Reduce el tamaño de los íconos sociales */
+        height: 20px;
+    }
+
+    #about-team iframe {
+        height: 200px; /* Ajusta el tamaño del iframe */
+        width: 350px;
+    }
+}
+
+/* Estilos para pantallas pequeñas (menos de 800px) */
+@media (max-width: 800px) and (min-width: 200px) {
+    #about-the-team h1 {
+        font-size: 28px; /* Reduce aún más el tamaño del título */
+    }
+
+    .team-card {
+        min-width:239px;
+        max-width:239px;
+        width: calc(40% - 20px); /* Dos columnas en pantalla pequeña */
+        height: 280px;
+    }
+
+    .team-avatar {
+        width: 207px; /* Reduce el tamaño de las imágenes de perfil */
+        height: 150px;
+    }
+
+    .team-name,
+    .team-position {
+        font-size: 14px; /* Reduce el tamaño del texto */
+    }
+
+    .team-social-icons {
+    }
+
+    .social-icon {
+        width: 18px; /* Reduce el tamaño de los íconos sociales */
+        height: 18px;
+    }
+
+    #about-team iframe {
+        height: 150px; /* Ajusta el tamaño del iframe */
+        width: 300px;
+    }
+}
+
+
+/*ScrollToTop*/
+#scroll-to-top {
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+#scroll-to-top button {
+    width: 45px;
+    height: 45px;
+    background-color: #007AF0;
+    color: #ffffff;
+    border: 2px solid white;
+    border-radius: 50%;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+#scroll-to-top button:hover {
+    background-color: #0055A4;
+}
+
+
+/*Footer*/
+
+.footer
+{
+    background: #08090a;
+    color: #f1f1f2;
+    width: 100%;
+    height: 100%;
+}
+
+.container-body
+{
+    display: flex;
+    padding: 20px;
+}
+
+.column1
+{
+    width: 100%;
+    max-width: 400px;
+}
+
+.nav-footer
+{
+    display: flex;
+    align-items: center;
+
+}
+
+
+.nav-footer img
+{
+    width: 250px;
+    height: 130px;
+    margin-right: 10px;
+
+}
+
+.column2
+{
+    max-width: 400px;
+    width: 100%;
+}
+
+.column2 .row
+{
+    display: flex;
+    margin-top: 10px;
+
+}
+
+.row img
+{
+    width: 30px;
+    height: 30px;
+
+}
+
+.row label
+{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.column3
+{
+    text-align: left;
+    line-height: 2;
+}
+
+.column3 .options li{
+    width: max-content;
+    list-style: none;
+}
+
+.column4 .nets li{
+
+    list-style: none;
+}
+
+.column2 .options li{
+
+    list-style: none;
+}
+
+.nav-footer li{
+    list-style: none;
+}
+
+
+
+.options-item a
+{
+    margin: 4px;
+    max-width: max-content;
+}
+.options-item-link
+{
+    color:white;
+}
+
+.column4
+{
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+
+.nets
+{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.nets img
+{
+    width: 35px;
+    height: 35px;
+}
+
+.nets a:hover
+{
+    color: transparent;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.download-footer
+{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.download-footer img
+{
+    width: 100px;
+    margin: 5px;
+}
+
+.download-footer a:hover
+{
+    color: transparent;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+@media (max-width: 900px)
+{
+    .container-body
+    {
+        flex-wrap: wrap;
+    }
+
+    .column4
+    {
+        width: 100%;
+        max-width: 400px;
+        text-align: left;
+
+    }
+
+    .nets
+    {
+        justify-content: left;
+    }
+
+    .download-footer
+    {
+        justify-content: left;
+    }
+}
+
+@media (max-width: 450px)
+{
+    .container-body
+    {
+        width: 100%;
+    }
+
+
+    body
+    {
+
+        width:130%;
+        box-sizing: border-box;
+    }
+}

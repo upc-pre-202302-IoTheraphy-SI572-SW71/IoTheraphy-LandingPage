@@ -131,7 +131,7 @@ header nav li
 {
     margin: 0 15px;
     width: max-content;
-    font-size: 20px;
+    font-size: 16px;
     color:  white;
 }
 
@@ -189,6 +189,50 @@ header nav li
     background: white;
 }
 
+/* Agrega estilos de CSS para los submenús */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    padding: 14px 16px;
+    border: none;
+    background-color: #007AF0;
+    color: white;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    margin-top: 8px;
+}
+
+.submenu a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.submenu a:hover {
+    background-color: #007AF0;
+    color: white;
+    border-radius: 5px;
+}
+
+.show {
+    display: block;
+}
 
 @media (max-width: 800px)   {
     header {
@@ -362,14 +406,17 @@ header nav li
 }
 
 /*Services Section*/
-
-#patient-services .container{
-    background: linear-gradient(to bottom, #659ebc 0%, #659ebc 0%, #ffffff 2%); /* Ajusta las posiciones para el degradado */
+#patient-services .container {
+    background: linear-gradient(to bottom, #659ebc 0%, #ffffff 2%, #ffffff 98%, #659ebc 100%),
+    linear-gradient(to top, #659ebc 0%, #ffffff 2%, #ffffff 98%, #659ebc 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #cfdff0; /* Establece el color de fondo de respaldo */
+    background-color: #cfdff0;
 }
+
+
+
 
 #patient-services .titles{
     text-align: center;
@@ -393,7 +440,7 @@ header nav li
     border-radius: 15px; /* Aplica bordes redondeados de 20 píxeles */
     padding: 30px; /* Añade un espacio interno para separar las tarjetas del borde */
     margin-top: 20px;
-    margin-bottom: 170px;/* Agrega un margen superior para separar los títulos de las tarjetas */
+    margin-bottom: 100px;/* Agrega un margen superior para separar los títulos de las tarjetas */
     display: flex;
 }
 
@@ -578,6 +625,333 @@ section h1.title
     }
 }
 
+/*Patients IoT*/
+#patients-iot .titles{
+    text-align: center;
+}
+#patients-iot .container{
+    position: relative;
+    margin-bottom: 5%;
+}
+
+
+#patients-iot .bottom-rectangle {
+    position: absolute;
+    bottom: -180px;
+    left: 20%;
+    width: 60%;
+    height: 30%; /* Ajusta la altura del rectángulo según tus necesidades */
+    background-color: white; /* Color del rectángulo */
+    box-shadow: 0 16px 32px rgba(12, 10, 10, 0.4);
+    border-radius: 5px;
+    z-index: 1; /* Asegura que el rectángulo esté superpuesto */
+    transition: transform 0.3s;
+}
+
+#patients-iot .bottom-rectangle:hover {
+    transform: scale(1.1);
+}
+
+/* Agrega estos estilos a tu hoja de estilo CSS */
+#patients-iot .container-iot {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+
+
+
+#patients-iot .left-container,
+#patients-iot .right-container {
+    flex: 1;
+    padding: 20px;
+}
+
+#patients-iot .divider {
+    margin-top: 2%;
+    width: 1px;
+    background-color: #afaeae;
+    height: 9vw;
+}
+
+
+#patients-iot  .non-button{
+    background-color: #ffffff;
+    border-color:#007AF0 ;
+    color: #007AF0;
+    border-radius: 5px;
+    padding: 5px 10px;
+
+}
+
+#patients-iot  .iot-button {
+    background-color: #007AF0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 4%;
+}
+
+#patients-iot .iot-button:hover {
+    background-color: #64b3de; /* Cambia el color al pasar el mouse */
+}
+
+#patients-iot h2{
+    margin-top: 2%;
+    font-size: 35px;
+}
+
+#patients-iot .features {
+    margin-top: 20px;
+}
+
+#patients-iot .feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#patients-iot .icon {
+    background-color: #007AF0;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 23px;
+    height: 23px;
+    margin-right: 10px;
+}
+
+#patients-iot .icon i{
+    padding-top: 2px;
+}
+
+
+
+
+#patients-iot .titles h1{
+
+    font-weight: bold;
+    color: #007AF0;
+}
+
+#patients-iot .titles h2{
+    font-weight: bold;
+
+    font-size: 40px;
+    color: black;
+}
+
+#patients-iot .left{
+    min-width: 50%;
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+    justify-content: center;
+}
+
+#patients-iot .left img{
+    max-width: 500px;
+}
+
+#patients-iot .right{
+    display: flex;
+    align-items: center;
+    color: black;
+    min-width: 20%;
+    margin-left: 1vw;
+    margin-right: 10vw;
+}
+
+#patients-iot .right .title{
+    font-size: 2vw;
+    color: black;
+    font-weight: 700;
+    line-height: 1.1em;
+
+}
+
+#patients-iot .line {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    margin-bottom: 20px;
+    margin-top: 15px;/* Ajusta según sea necesario para una mayor separación entre la línea y el título */
+}
+
+#patients-iot .right p{
+    margin: 1.5vw 0px;
+    font-size: 1vw;
+}
+
+/* physio iot*/
+#physiotherapist-iot{
+    position: relative;
+    background: linear-gradient(to top, #659ebc 0%, #659ebc 0%, #eff3f2 2%);
+}
+
+#physiotherapist-iot .titles{
+    text-align: center;
+}
+#physiotherapist-iot .container{
+    padding-top: 50px;
+}
+
+
+#physiotherapist-iot .titles h1{
+   padding-top: 50px;
+    font-weight: bold;
+    color: #007AF0;
+}
+
+#physiotherapist-iot .titles h2{
+    font-weight: bold;
+
+    font-size: 40px;
+    color: black;
+}
+
+#physiotherapist-iot .right{
+    min-width: 50%;
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+    justify-content: center;
+}
+
+#physiotherapist-iot .right img{
+    max-width: 500px;
+    margin-bottom: 80px;
+}
+
+#physiotherapist-iot .left{
+    display: flex;
+    align-items: center;
+    color: black;
+    min-width: 20%;
+    margin-left: 1vw;
+    margin-right: 10vw;
+}
+
+#physiotherapist-iot .left .title{
+    font-size: 3vw;
+    color: black;
+    font-weight: 700;
+    line-height: 1.1em;
+
+}
+
+#physiotherapist-iot .line {
+    width: 100%;
+    height: 3px;
+    background-color: #eff3f2;
+    margin-bottom: 20px;
+    margin-top: 15px;/* Ajusta según sea necesario para una mayor separación entre la línea y el título */
+}
+
+#physiotherapist-iot .left p{
+    margin: 1.5vw 1px;
+    font-size: 1vw;
+}
+
+
+
+
+/*Patients Views*/
+#patient-views .page {
+
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    background-image: url('../images/img2.png'); /* Cambia 'ruta_de_la_imagen.jpg' a la URL de tu imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el elemento */
+    background-position: center; /* Centra la imagen horizontal y verticalmente */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+
+
+}
+#patient-views .contents {
+
+
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    margin-left: 48px;
+    margin-right: 48px;
+}
+
+#patient-views .text{
+    width:400px;
+    margin-top: 50px;
+
+}
+
+#patient-views .text h1{
+    font-size: 70px;
+    font-weight: bold;
+    padding-bottom: 50px;
+}
+
+#patient-views .text h2{
+    font-weight: 800;
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+
+#patient-views .download-buttons{
+    display: flex;
+    flex-direction: column;
+
+    padding-bottom: 210px;
+}
+
+#patient-views .btn-rectangular{
+
+    width:110px;
+
+}
+
+
+#patient-views .download-button-android img{
+
+    width:193px;
+    height: 75px;
+
+}
+#patient-views .download-button-ios img{
+    width:194px;
+    height: 61px;
+    padding-bottom: 160px;
+}
+
+#patient-views .img{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+
+
+#patient-views .image-1 img{
+    margin-top: 300px;
+    width:230px;
+    height:400px;
+
+}
+#patient-views .image-2 img{
+    margin-left: 6px;
+    margin-top: 180px;
+    width:790px;
+    height: 500px;
+}
+
+
 /*About Product**/
 .about-product{
     background-color: #0069D0;
@@ -608,6 +982,15 @@ section h1.title
     font-size: 3vw;
     font-weight: 700;
     line-height: 1.1em;
+
+}
+
+#about-product .line {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    margin-bottom: 20px;
+    margin-top: 15px;/* Ajusta según sea necesario para una mayor separación entre la línea y el título */
 }
 
 #about-product .left p{
@@ -710,10 +1093,28 @@ section h1.title
 /*Physiotherapist section**/
 
 #physiotherapist-services {
+    background: linear-gradient(to bottom, #659ebc 0%, #659ebc 0%, #ffffff 2%);
     background-color: rgb(255, 255, 255);
-    height: 850px;
-    padding-top: 110px;
+    height: 930px;
+    padding-top: 70px;
 }
+
+#physiotherapist-services .titles{
+    text-align: center;
+}
+
+#physiotherapist-services .titles h1{
+
+    font-weight: bold;
+    color: #007AF0;
+}
+
+#physiotherapist-services .titles h2{
+    font-weight: bold;
+    margin-bottom: 50px;
+    font-size: 40px;
+}
+
 
 #physiotherapist-services .right{
     min-width: 50%;
@@ -948,6 +1349,292 @@ section h1.title
 
     }
 }
+
+
+/*Doctor Views*/
+
+
+#doco-views {
+}
+
+
+
+#doco-views .page {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    background-image: url('../images/img.png'); /* Cambia 'ruta_de_la_imagen.jpg' a la URL de tu imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el elemento */
+    background-position: center; /* Centra la imagen horizontal y verticalmente */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+
+
+}
+#doco-views .contents {
+
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    margin-left: 48px;
+    margin-right: 48px;
+}
+
+#doco-views .text{
+    width:400px;
+    margin-top: 50px;
+
+}
+
+#doco-views .text h1{
+    font-size: 70px;
+    font-weight: bold;
+    padding-bottom: 50px;
+}
+
+#doco-views .text h2{
+    font-weight: 800;
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+
+#doco-views .download-buttons{
+    display: flex;
+    flex-direction: column;
+
+}
+
+#doco-views .download-button-android img{
+
+    width:193px;
+    height: 75px;
+
+}
+#doco-views .download-button-ios img{
+    width:194px;
+    height: 61px;
+    padding-bottom: 120px;
+}
+
+#doco-views .img{
+    display: flex;
+    flex-direction: row;
+    margin-top: 160px;
+    margin-left: 150px;
+}
+
+#doco-views img{
+    width:290px;
+    height:510px;
+}
+#doco-views .image-1{
+    margin-top: 90px;
+}
+
+#doco-views .image-3{
+    margin-top: 90px;
+}
+
+
+/*Pricing*/
+/* Estilos para las tarjetas de precios */
+.titles .buttons {
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.titles button {
+    margin:5px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-color: #007AF0;
+    color: #007AF0;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.titles button.selected {
+    background-color: #007AF0;
+    border:none;
+    color: white;
+}
+
+.pricing-cards {
+    background: linear-gradient(to bottom, #659ebc 0%, #659ebc 0%, #f2f2f2 2%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Ajusta según tus necesidades */
+
+}
+
+
+.pricing-card h1{
+
+}
+
+.money{
+    display: flex;
+    flex-direction: row;
+}
+
+.money h1{
+    font-size: 45px;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+.money h2{
+    padding-left: 2%;
+    padding-top: 11%;
+    font-size: 25px;
+    font-weight: bold;
+    color: grey;
+    padding-bottom: 15px;
+}
+
+.pricing-card h2{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.pricing-card h4{
+    padding-top: 10px;
+    font-size: 15px;
+    color: #868686;
+    padding-bottom: 20px;
+}
+
+.pricing-card h3{
+    font-size: 15px;
+}
+
+
+#pricing .titles{
+    margin-top:45px;
+    text-align: center;
+}
+
+#pricing .titles h1{
+
+    font-weight: bold;
+    color: #007AF0;
+}
+
+#pricing .titles h2{
+    font-weight: bold;
+
+    font-size: 40px;
+}
+
+.pricing-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 1%;
+}
+
+.separator{
+    width:150px
+}
+/* Estilos base de la tarjeta de precios */
+.pricing-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 16px 32px rgba(12, 10, 10, 0.4); /* Ajusta los valores para una sombra más fuerte */
+    padding: 20px;
+    width: 260px;
+    margin: 10px 0;
+    transition: transform 0.3s;
+}
+
+.pricing-card:hover {
+    transform: scale(1.1);
+}
+
+.flip {
+    animation: flipAnimation 1.5s;
+}
+
+@keyframes flipAnimation {
+    from {
+        transform: perspective(800px) rotateY(0);
+    }
+    to {
+        transform: perspective(800px) rotateY(360deg);
+    }
+}
+
+
+.pricing-description {
+    color: #000000;
+    font-size: 14px;
+    margin: 0;
+}
+
+
+.features {
+    margin-top: 20px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.icon {
+    background-color: #007AF0;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 23px;
+    height: 23px;
+    margin-right: 10px;
+}
+
+.icon i{
+    padding-top: 2px;
+}
+
+
+
+.apply-button {
+    background-color: #007AF0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 35%;
+    margin-top:10%
+}
+
+.apply-button:hover {
+    background-color: #64b3de; /* Cambia el color al pasar el mouse */
+}
+
+.low-conditions{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.low-conditions h2{
+    font-size: 20px;
+    color:#007AF0;
+}
+
+
+@media (max-width: 800px) {
+    .pricing-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+
 
 
 /*Testimonials*/

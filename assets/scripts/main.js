@@ -50,6 +50,18 @@ function yousendit2(){
 
 }
 
+// Función para el desplazamiento suave
+function scrollToSection(targetId) {
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+        window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: "smooth"
+        });
+    }
+}
+
 
 function selectButton(selectedButton) {
     // Obtén referencias a los botones

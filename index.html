@@ -57,8 +57,8 @@
         <li class="item2 dropdown">
             <a href="#" class="dropbtn">Language</a>
             <div class="submenu" id="languageSubMenu">
-                <a href="https://upc-pre-202302-iotheraphy-si572-sw71.github.io/IoTheraphy-LandingPage/">English</a>
-                <a href="https://upc-pre-202302-iotheraphy-si572-sw71.github.io/IoTheraphy-LandingPage/index-spanish.html">Spanish</a>
+                <a href="https://upc-pre-202302-iotheraphy-si572-sw71.github.io/IoTheraphy-LandingPage/" class="external-link">English</a>
+                <a href="https://upc-pre-202302-iotheraphy-si572-sw71.github.io/IoTheraphy-LandingPage/index-spanish.html" class="external-link">Spanish</a>
             </div>
         </li>
 
@@ -252,7 +252,7 @@
             <div class="right">
                 <div>
                     <img src="./assets/images/physioterapist.png" alt="disabled-people">
-                    <a href="#" class="btn-rectangular">Apply now</a>
+                    <a class="btn-rectangular" onclick="scrollToSection('pricing')">See plans</a>
                 </div>
             </div>
         </div>
@@ -303,7 +303,7 @@
             <div class="container-iot">
                 <div class="left-container">
                     <button class="non-button"> IoTheraphy Price</button>
-                    <h2> S/. 2 500 <span style="font-size: 18px; color:grey ">/per band</span></h2>
+                    <h2> S/. 699.90 <span style="font-size: 18px; color:grey ">/per band</span></h2>
                     <a href="mailto:u202020341@upc.edu.pe?subject=Deseo conseguir su producto Iotheraphy Band&body=Hola, me comunico para">
                         <button class="iot-button">Buy Now</button>
                     </a>
@@ -389,13 +389,8 @@
                 </h2>
             </div>
             <div class="download-buttons">
-                <a href="enlace_a_la_app_en_la_tienda_de_Android" class="download-button-android">
-                    <img src="https://play.google.com/intl/es-419/badges/static/images/badges/es-419_badge_web_generic.png" alt="Android">
-
-                </a>
-                <a href="enlace_a_la_app_en_la_tienda_de_iOS" class="download-button-ios">
-                    <img src="https://raw.githubusercontent.com/GabrielGomezDlc/PP-Daop/main/src/assets/1280px-Download_on_the_App_Store_Badge_ESMX_RGB_blk.svg_-1024x342.png" alt="iOS">
-
+                <a class="download-button-android">
+                    <a  class="btn-rectangular" onclick="scrollToSection('pricing')">See plans</a>
                 </a>
             </div>
 
@@ -761,8 +756,13 @@
     navLinks.forEach(function (link) {
         link.addEventListener("click", function (e) {
             e.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
-            scrollToSection(targetId);
+            if (!this.classList.contains("external-link")) {
+                const targetId = this.getAttribute("href").substring(1);
+                scrollToSection(targetId);
+            } else {
+                // Si es un enlace externo, simplemente sigue el enlace
+                window.location.href = this.getAttribute("href");
+            }
         });
     });
 

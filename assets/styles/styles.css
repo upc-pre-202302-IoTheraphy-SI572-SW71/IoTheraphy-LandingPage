@@ -355,7 +355,7 @@ header nav li
 
 .btn-rectangular:hover {
     background-color: #0055A4; /* Cambia el color de fondo al acercar el mouse */
-    opacity: 0.6; /* Reduce la opacidad al acercar el mouse */
+
 }
 
 
@@ -1163,7 +1163,7 @@ section h1.title
 
 #physiotherapist-services .btn-rectangular:hover {
     background-color: #0055A4; /* Cambia el color de fondo al acercar el mouse */
-    opacity: 0.6; /* Reduce la opacidad al acercar el mouse */
+
 }
 
 
@@ -1378,6 +1378,7 @@ section h1.title
     height: 100%;
     margin-left: 48px;
     margin-right: 48px;
+    padding-bottom: 4%;
 }
 
 #doco-views .text{
@@ -1404,9 +1405,22 @@ section h1.title
 
 }
 
-#doco-views .download-button-android img{
+#doco-views .btn-rectangular{
+    width:95px;
+    border: 10px #007AF0;
+    background-color: white;
+    color:#007AF0;
+    box-shadow: 0 16px 32px rgba(12, 10, 10, 0.4);
+}
 
-    width:193px;
+#doco-views .btn-rectangular:hover{
+    background-color:  #1c7ef8;
+    color:white
+}
+
+#doco-views .download-button-android a{
+
+    width:250px;
     height: 75px;
 
 }

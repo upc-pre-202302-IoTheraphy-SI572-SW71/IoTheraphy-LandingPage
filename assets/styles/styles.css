@@ -906,7 +906,7 @@ section h1.title
      
         
         width: auto;
-        border: 2px solid red;
+    
 
     }
 
@@ -1004,7 +1004,7 @@ section h1.title
      
         
         width: auto;
-        border: 2px solid red;
+  
 
     }
 
@@ -1261,7 +1261,7 @@ section h1.title
      
         
         width: auto;
-        border: 2px solid red;
+
 
     }
 
@@ -1418,8 +1418,8 @@ section h1.title
         font-size: 45px;
         font-weight: bold;
         padding-bottom: 10px;
-        color: purple;
     }
+
     #patient-views .contents {
         flex-direction: column;
         display: flex;
@@ -1577,7 +1577,7 @@ section h1.title
         font-size: 45px;
         font-weight: bold;
         padding-bottom: 50px;
-        color: green;
+
     }
     
     #patient-views .text h2{
@@ -1636,7 +1636,7 @@ section h1.title
         font-size: 60px;
         font-weight: bold;
         padding-bottom: 50px;
-        color: red;
+   
     }
     
     #patient-views .text h2{
@@ -2246,7 +2246,7 @@ section h1.title
         font-size: 45px;
         font-weight: bold;
         padding-bottom: 10px;
-        color: purple;
+     
     }
     #doco-views .contents {
         flex-direction: column;
@@ -2358,7 +2358,7 @@ section h1.title
         font-size: 45px;
         font-weight: bold;
         padding-bottom: 10px;
-        color: yellow;
+  
     }
     
 
@@ -2495,7 +2495,7 @@ section h1.title
         font-size: 60px;
         font-weight: bold;
         padding-bottom: 50px;
-        color: red;
+  
     }
     
     #doco-views .text h2{

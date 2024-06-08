@@ -1,19 +1,19 @@
 * {
     margin: 0;
     font-family: ibm-plex-sans, sans-serif;
+    list-style: none;
+
+}
+
+ul {
+    list-style-type: disc; /* Agrega viñeta
     font-weight: 400;
     font-style: normal;
 }
 
 
 li, nav
-{
-    list-style: none;
-
-}
-
-ul {
-    list-style-type: disc; /* Agrega viñetas en forma de puntos sólidos */
+{s en forma de puntos sólidos */
 
 }
 
@@ -47,9 +47,6 @@ a.btn:hover
     background-color: yellow;
 }
 
-
-
-
 .container{
     display: flex;
     align-items: center;
@@ -67,7 +64,6 @@ a.btn:hover
 
 header
 {
-
     z-index: 1;
     display: flex;
     justify-content: space-between;
@@ -85,6 +81,7 @@ header .name
     margin-bottom: 15px;
 }
 
+
 header .nav-header
 {
     display: flex;
@@ -101,8 +98,6 @@ header .nav-header
 {
     width: 100px;
     height: 100px;
-
-
 }
 
 .logo2 img{
@@ -125,6 +120,7 @@ header .nav-header
 header nav
 {
     display: flex;
+    text-align: center;
 }
 
 header nav li
@@ -195,14 +191,7 @@ header nav li
     display: inline-block;
 }
 
-.dropbtn {
-    padding: 14px 16px;
-    border: none;
-    background-color: #007AF0;
-    color: white;
-    font-family: inherit;
-    cursor: pointer;
-}
+
 
 .submenu {
     display: none;
@@ -242,6 +231,8 @@ header nav li
 
 @media (max-width: 1300px)  {
 
+
+
     header h2 {
         margin-bottom: 10px;
     }
@@ -266,10 +257,8 @@ header nav li
         top: 110px;
         width: 100%;
         line-height: 3;
-
         height: calc(100% - 95px);
         overflow-y: auto;
-
         left: 100%;
         transition: 0.1s;
     }
@@ -301,6 +290,18 @@ header nav li
     }
 }
 
+@media (min-width: 1270px) {
+    .nav-header .logo
+    {
+        margin-right: 2px;
+    }
+
+    header nav
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+}
 
 /*HERO SECTION*/
 /* Estilo para la sección hero completa */
@@ -361,6 +362,10 @@ header nav li
 
 /* Consulta de medios para tabletas */
 @media (max-width: 800px) and (min-width:200px) {
+    .nav-header .logo
+    {
+        margin-right: 10px;
+    }
     .hero-card {
         padding: 10px; /* Ajusta el relleno para dispositivos más pequeños */
         width: 300px;
@@ -384,6 +389,8 @@ header nav li
 
 /* Consulta de medios para smartphones */
 @media (max-width: 1300px) and (min-width:800px) {
+
+
     .hero-card {
         padding: 10px; /* Ajusta el relleno para dispositivos más pequeños */
         width: 450px;
@@ -412,6 +419,7 @@ header nav li
     display: flex;
     flex-direction: column;
     align-items: center;
+
     background-color: #cfdff0;
 }
 
@@ -581,10 +589,36 @@ section h1.title
     }
 
     #patient-services .card {
-        width: 100%; /* Ocupa todo el ancho disponible */
+        width: auto; /* Ocupa todo el ancho disponible */
         max-width: none; /* Restablece el ancho máximo */
         margin: 20px 0; /* Cambia el margen vertical */
     }
+}
+
+@media (min-width: 1270px) {
+    #patient-services .cards-container{
+        max-width: 1200px;
+        border: 4px solid #007AF0; /* Añade un borde de 2 píxeles de ancho y color blanco */
+        border-radius: 15px; /* Aplica bordes redondeados de 20 píxeles */
+        padding: 10px; /* Añade un espacio interno para separar las tarjetas del borde */
+        margin-top: 20px;
+        margin-bottom: 100px;/* Agrega un margen superior para separar los títulos de las tarjetas */
+        display: flex;
+    }
+
+    #patient-services .card {
+        display: flex; /* Usa flexbox para organizar el contenido */
+        border-radius: 5px; /* Aplica bordes redondeados */
+        padding: 10px; /* Añade un espacio interno para separar los elementos */
+        margin: 10px; /* Agrega margen para separar las tarjetas */
+        align-items: center; /* Alinea verticalmente los elementos */
+        width: auto;
+        height: 200px;
+        transition: transform 0.3s ease;
+        background-color: #ffffff;
+        border: 1px solid #000000;/* Agregamos una transición de 0.3 segundos en la propiedad 'transform' */
+    }
+
 }
 
 /* Estilos para smartphones (ancho de pantalla menor a 800px) */
@@ -601,19 +635,20 @@ section h1.title
 
     #patient-services .cards-container {
         flex-direction: column; /* Cambia a disposición de columna en smartphones */
-        max-width: 80%; /* Reduzca el ancho máximo */
-        margin-left: auto;
-        margin-right: auto; /* Centra la sección */
+        max-width: 100%; /* Reduzca el ancho máximo */
+         /* Centra la sección */
     }
 
+
     #patient-services .card {
-        width: 100%; /* Ocupa todo el ancho disponible */
+        width: auto; /* Ocupa todo el ancho disponible */
         max-width: none; /* Restablece el ancho máximo */
-        margin: 20px 0 ; /* Cambia el margen vertical */
+        /* Cambia el margen vertical */
     }
 
     #patient-services .card-content {
         text-align: center; /* Centra el contenido en smartphones */
+        font-size: 5px;
     }
 
     #patient-services .card-title {
@@ -788,6 +823,284 @@ section h1.title
     font-size: 1vw;
 }
 
+/* Estilos para pantallas pequeñas (menos de 800px) */
+@media (max-width: 899px)  {
+
+    #physiotherapist-services{
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    #physiotherapist-services .box{
+        width: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+
+    #patients-iot h2{
+        margin-top: 2%;
+        font-size: 15px;
+    }
+    #physiotherapist-services .right img {
+        margin-top: 50px;
+        width: auto; /* Ajusta el tamaño de la imagen al ancho de la pantalla */
+        height: 350px;
+        border-radius: 20px;
+
+    }
+
+    #physiotherapist-services .left {
+      width: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #physiotherapist-services .left .title{
+        font-size:35px;
+        display: flex;
+        justify-content: center;
+      align-items: center;
+
+    }
+
+
+    #physiotherapist-services .btn-rectangular {
+
+        width: 70px;
+        height:20px;
+        font-size: 15px;
+
+    }
+
+    /* Estilos para los elementos expandibles */
+    .expanding-item {
+        width: 400px; /* Ajusta el ancho de los elementos expandibles */
+        padding: 10px;
+    }
+
+    .expand-button {
+        margin-left: auto; /* Mueve el botón al extremo derecho */
+
+    }
+}
+
+
+
+
+@media (max-width: 999px){
+
+    #patients-iot{
+        height: auto;
+    }
+    #patients-iot .container {
+        flex-direction: column;
+        
+    }
+    #patients-iot .box{
+        flex-direction: column;
+        justify-content: center;
+     
+        
+        width: auto;
+        border: 2px solid red;
+
+    }
+
+
+    #patients-iot h2{
+        margin-top: 2%;
+        font-size: 25px;
+    }
+
+    #patients-iot .feature {
+        font-size: 13px;
+    }
+}
+     
+/* Estilos para pantallas pequeñas (menos de 800px) */
+@media (max-width: 899px)  {
+
+    #physiotherapist-services{
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    #physiotherapist-services .box{
+        width: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+
+    #patients-iot h2{
+        margin-top: 2%;
+        font-size: 15px;
+    }
+    #physiotherapist-services .right img {
+        margin-top: 50px;
+        width: auto; /* Ajusta el tamaño de la imagen al ancho de la pantalla */
+        height: 350px;
+        border-radius: 20px;
+
+    }
+
+    #physiotherapist-services .left {
+      width: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #physiotherapist-services .left .title{
+        font-size:35px;
+        display: flex;
+        justify-content: center;
+      align-items: center;
+
+    }
+
+
+    #physiotherapist-services .btn-rectangular {
+
+        width: 70px;
+        height:20px;
+        font-size: 15px;
+
+    }
+
+    /* Estilos para los elementos expandibles */
+    .expanding-item {
+        width: 400px; /* Ajusta el ancho de los elementos expandibles */
+        padding: 10px;
+    }
+
+    .expand-button {
+        margin-left: auto; /* Mueve el botón al extremo derecho */
+
+    }
+}
+
+
+
+
+@media (max-width: 999px){
+
+    #patients-iot{
+        height: auto;
+    }
+    #patients-iot .container {
+        flex-direction: column;
+        
+    }
+    #patients-iot .box{
+        flex-direction: column;
+        justify-content: center;
+     
+        
+        width: auto;
+        border: 2px solid red;
+
+    }
+
+
+    #patients-iot h2{
+        margin-top: 2%;
+        font-size: 25px;
+    }
+
+    #patients-iot .feature {
+        font-size: 13px;
+    }
+
+    #patients-iot .bottom-rectangle {
+        position: absolute;
+        bottom: -250px;
+        left: 20%;
+        width: auto;
+        height: auto; /* Ajusta la altura del rectángulo según tus necesidades */
+        background-color: white; /* Color del rectángulo */
+        box-shadow: 0 16px 32px rgba(12, 10, 10, 0.4);
+        border-radius: 5px;
+        z-index: 1; /* Asegura que el rectángulo esté superpuesto */
+        transition: transform 0.3s;
+    }
+}
+
+/* Estilos para pantallas grandes (más de 1300px) */
+@media (max-width: 1500px) and (min-width: 1000px) {
+
+    #patients-iot{
+        height: 880px;
+    }
+
+    #patients-iot .box{
+        width: auto;
+
+
+    }
+
+    #patients-iot .container {
+        flex-direction: column;
+        align-items: start;
+        justify-content: left;
+    }
+
+    #patients-iot .bottom-rectangle {
+        position: absolute;
+        bottom: -150px;
+        left: 20%;
+        width: 60%;
+        height: 30%; /* Ajusta la altura del rectángulo según tus necesidades */
+        background-color: white; /* Color del rectángulo */
+        box-shadow: 0 16px 32px rgba(12, 10, 10, 0.4);
+        border-radius: 5px;
+        z-index: 1; /* Asegura que el rectángulo esté superpuesto */
+        transition: transform 0.3s;
+    }
+
+}
+
+/* Estilos para pantallas grandes (más de 1300px) */
+@media (max-width: 1500px) and (min-width: 1000px) {
+
+    #patients-iot{
+        height: 880px;
+    }
+
+    #patients-iot .box{
+        width: auto;
+       
+
+    }
+
+    #patients-iot .container {
+        flex-direction: column;
+        align-items: start;
+        justify-content: left;
+    }
+
+    #patients-iot .bottom-rectangle {
+        position: absolute;
+        bottom: -150px;
+        left: 20%;
+        width: 60%;
+        height: 30%; /* Ajusta la altura del rectángulo según tus necesidades */
+        background-color: white; /* Color del rectángulo */
+        box-shadow: 0 16px 32px rgba(12, 10, 10, 0.4);
+        border-radius: 5px;
+        z-index: 1; /* Asegura que el rectángulo esté superpuesto */
+        transition: transform 0.3s;
+    }
+}
+
+
+
 /* physio iot*/
 #physiotherapist-iot{
     position: relative;
@@ -860,12 +1173,149 @@ section h1.title
 
 
 
+/* Estilos para pantallas pequeñas (menos de 800px)  */
+@media (max-width: 899px)  {
+
+    #physiotherapist-services{
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    #physiotherapist-services .box{
+        width: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+
+    #patients-iot h2{
+        margin-top: 2%;
+        font-size: 15px;
+    }
+    #physiotherapist-services .right img {
+        margin-top: 50px;
+        width: auto; /* Ajusta el tamaño de la imagen al ancho de la pantalla */
+        height: 350px;
+        border-radius: 20px;
+
+    }
+
+    #physiotherapist-services .left {
+      width: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #physiotherapist-services .left .title{
+        font-size:35px;
+        display: flex;
+        justify-content: center;
+      align-items: center;
+
+    }
+
+
+    #physiotherapist-services .btn-rectangular {
+
+        width: 70px;
+        height:20px;
+        font-size: 15px;
+
+    }
+
+    /* Estilos para los elementos expandibles */
+    .expanding-item {
+        width: 400px; /* Ajusta el ancho de los elementos expandibles */
+        padding: 10px;
+    }
+
+    .expand-button {
+        margin-left: auto; /* Mueve el botón al extremo derecho */
+
+    }
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 999px){
+
+    #physiotherapist-iot{
+        height: auto;
+    }
+    #physiotherapist-iot .container {
+        flex-direction: column;
+        
+    }
+    #physiotherapist-iot .box{
+        flex-direction: column;
+        justify-content: center;
+     
+        
+        width: auto;
+        border: 2px solid red;
+
+    }
+
+
+    #physiotherapist-iot .box .left{
+      margin-top: 180px;
+
+    }
+
+    #physiotherapist-iot .box .right{
+        margin-top: 40px;
+  
+      }
+
+
+
+    #physiotherapist-iot .box .right img{
+        width: 70%;
+        height: auto;
+  
+      }
+
+
+}
+
+
+
+/* Estilos para pantallas grandes (más de 1300px) */
+@media (max-width: 1500px) and (min-width: 1000px) {
+
+    #physiotherapist-iot{
+        height: 880px;
+    }
+
+    #physiotherapist-iot .box{
+        width: auto;
+       
+
+    }
+
+    #physiotherapist-iot .container {
+        flex-direction: column;
+        align-items: start;
+        justify-content: left;
+    }
+
+}
+
 
 /*Patients Views*/
 #patient-views .page {
 
     display: flex;
-    flex-direction: row;
+    flex-direction:row;
     height: 100%;
     background-image: url('../images/img2.png'); /* Cambia 'ruta_de_la_imagen.jpg' a la URL de tu imagen de fondo */
     background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el elemento */
@@ -879,6 +1329,8 @@ section h1.title
 
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
     margin-left: 48px;
@@ -904,10 +1356,8 @@ section h1.title
 }
 
 #patient-views .download-buttons{
-    display: flex;
-    flex-direction: column;
+    
 
-    padding-bottom: 210px;
 }
 
 #patient-views .btn-rectangular{
@@ -927,6 +1377,8 @@ section h1.title
     width:194px;
     height: 61px;
     padding-bottom: 160px;
+    justify-content: center;
+    align-items: center;
 }
 
 #patient-views .img{
@@ -951,11 +1403,276 @@ section h1.title
     height: 500px;
 }
 
+@media screen and (max-width: 699px) {
+
+
+    #patient-views .btn-rectangular{
+
+        width: 100px;
+        font-size: 15px;
+        text-align: center;
+
+    }
+
+    #patient-views .text h1{
+        font-size: 45px;
+        font-weight: bold;
+        padding-bottom: 10px;
+        color: purple;
+    }
+    #patient-views .contents {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #patient-views .img {
+        display: flex;
+        justify-content: center;
+    }
+
+    #patient-views div.img {
+        flex-direction: row;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #patient-views .image-1 img{
+        margin-top: 50px;
+        width:200px;
+        height:auto;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+
+    }
+
+
+    #patient-views .image-2 img{
+   display: none;
+
+
+    }
+
+
+}
+
+@media screen and (max-width: 999px) and (min-width:700px){
+
+
+    #patient-views .btn-rectangular{
+
+        width: 120px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+
+    }
+    #patient-views .contents {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+  
+    #patient-views .image-1 img{
+        display: none;
+    
+    }
+    #patient-views .text{
+        justify-content: center;
+        align-items: center;
+        
+    
+    }
+
+    #patient-views .text .title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+    
+    }
+
+    #patient-views .text .description {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     
+    
+    }
+
+
+
+    #patient-views .text h1{
+        font-size: 45px;
+        font-weight: bold;
+        padding-bottom: 10px;
+        color: yellow;
+    }
+    
+
+
+    #patient-views .img{
+        display: flex;
+        flex-direction: row;
+        margin-top: 10;
+        margin-bottom: 20px;
+        margin-left: 0;
+    }
+    
+
+    #patient-views .image-2 img{
+        width: 520px;
+        height: auto;
+        margin-top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+        
+    
+    }
+
+    #patient-views .download-buttons{
+        margin-bottom: 10px;
+    
+    }
+
+
+
+
+}
+
+@media screen and (max-width: 1299px) and (min-width: 1000px){
+
+
+    #patient-views .btn-rectangular{
+
+        width: 120px;
+        font-size: 20px;
+        text-align: center;
+
+    }
+
+    #patient-views .image-1 img{
+        margin-top: 100px;
+        width:200px;
+        height:400px;
+    
+    }
+    #patient-views .text{
+        width:300px;
+        margin-top: 20px;
+    
+    }
+
+    #patient-views .text h1{
+        font-size: 45px;
+        font-weight: bold;
+        padding-bottom: 50px;
+        color: green;
+    }
+    
+    #patient-views .text h2{
+        font-weight: 800;
+        font-size: 25px;
+        padding-bottom: 20px;
+    }
+
+    #patient-views .img{
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 30px;
+    }
+    
+
+    #patient-views .image-2 img{
+        width: 420px;
+        height: 350px;
+
+    }
+
+    
+
+
+
+
+}
+
+
+@media screen and (max-width: 1500px) and (min-width: 1300px) {
+
+
+    #patient-views .btn-rectangular{
+
+        width: 150px;
+        font-size: 25px;
+        text-align: center;
+
+    }
+
+    #patient-views .image-1 img{
+        margin-top: 100px;
+        width:230px;
+        height:400px;
+    
+    }
+    #patient-views .text{
+        width:500px;
+        margin-top: 20px;
+    
+    }
+
+    #patient-views .text h1{
+        font-size: 60px;
+        font-weight: bold;
+        padding-bottom: 50px;
+        color: red;
+    }
+    
+    #patient-views .text h2{
+        font-weight: 800;
+        font-size: 25px;
+        padding-bottom: 20px;
+    }
+
+    #patient-views .img{
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 30px;
+    }
+    
+
+    #patient-views .image-2 img{
+        width: 500px;
+        height: 350px;
+
+    }
+
+    
+
+
+
+
+}
+
 
 /*About Product**/
 .about-product{
     background-color: #0069D0;
     height: 900px;
+
 }
 
 .about-product .right{
@@ -1063,18 +1780,20 @@ section h1.title
         font-size: 35px; /* Tamaño de fuente más pequeño para smartphones */
     }
 
+    #patient-views .text{
+        width:auto;
+        margin-top: 50px;
+
+    }
     #about-product .left p {
         font-size: 19px; /* Tamaño de fuente más pequeño para smartphones */
         margin-right: 50px;
     }
 
-    #about-product .btn-rectangular {
-        width: 80px; /* Reduzca el ancho del botón rectangular para smartphones */
-        font-size: 14px; /* Tamaño de fuente más pequeño para smartphones */
-    }
+
 
     #about-product .right {
-        min-width: 100%; /* Ajusta el ancho mínimo del lado derecho para smartphones */
+        min-width: auto; /* Ajusta el ancho mínimo del lado derecho para smartphones */
     }
 
     #about-product .box{
@@ -1089,6 +1808,14 @@ section h1.title
         max-width: none; /* Restablece el ancho máximo */
     }
 }
+
+
+@media screen and (max-width: 1500px) and (min-width: 1300px) {
+
+}
+
+
+
 
 /*Physiotherapist section**/
 
@@ -1221,18 +1948,131 @@ section h1.title
 .expanded {
     max-height: 200px; /* Establece la altura máxima deseada para la expansión */
     margin-top: 20px;
-    padding: 25px;
+
 }
 
 #physiotherapist-services li{
     list-style: inherit;
 }
 
-/* Estilos para pantallas grandes (más de 1300px) */
-@media (max-width: 1300px) and (min-width: 800px) {
+/* Estilos para pantallas pequeñas (menos de 800px) */
+@media (max-width: 899px)  {
 
     #physiotherapist-services{
-        height: 780px;
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    #physiotherapist-services .box{
+        width: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+
+
+    #physiotherapist-services .right img {
+        margin-top: 50px;
+        width: auto; /* Ajusta el tamaño de la imagen al ancho de la pantalla */
+        height: 350px;
+        border-radius: 20px;
+
+    }
+
+    #physiotherapist-services .left {
+      width: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #physiotherapist-services .left .title{
+        font-size:35px;
+        display: flex;
+        justify-content: center;
+      align-items: center;
+
+    }
+
+
+    #physiotherapist-services .btn-rectangular {
+
+        width: 70px;
+        height:20px;
+        font-size: 15px;
+
+    }
+
+    /* Estilos para los elementos expandibles */
+    .expanding-item {
+        width: 400px; /* Ajusta el ancho de los elementos expandibles */
+        padding: 10px;
+    }
+
+    .expand-button {
+        margin-left: auto; /* Mueve el botón al extremo derecho */
+
+    }
+}
+
+/* Estilos para pantallas pequeñas (menos de 800px) */
+@media (max-width: 1299px)  and (min-width: 900px){
+
+    #physiotherapist-services{
+        height: auto;
+    }
+
+    #physiotherapist-services .box{
+        width: auto;
+    }
+
+
+
+    #physiotherapist-services .right img {
+        margin-top: 50px;
+        width: auto; /* Ajusta el tamaño de la imagen al ancho de la pantalla */
+        height: 350px;
+        border-radius: 20px;
+
+    }
+
+    #physiotherapist-services .left {
+      width: auto;
+    }
+
+    #physiotherapist-services .left .title{
+        font-size:35px;
+
+    }
+
+
+    #physiotherapist-services .btn-rectangular {
+
+        width: 70px;
+        height:20px;
+        font-size: 15px;
+
+    }
+
+    /* Estilos para los elementos expandibles */
+    .expanding-item {
+        width: 400px; /* Ajusta el ancho de los elementos expandibles */
+        padding: 10px;
+    }
+
+    .expand-button {
+        margin-left: auto; /* Mueve el botón al extremo derecho */
+
+    }
+}
+
+/* Estilos para pantallas grandes (más de 1300px) */
+@media (max-width: 1500px) and (min-width: 1300px) {
+
+    #physiotherapist-services{
+        height: 880px;
     }
 
     #physiotherapist-services .box{
@@ -1288,65 +2128,6 @@ section h1.title
 
     .expanding-content{
         font-size: 14px;
-    }
-}
-
-/* Estilos para pantallas pequeñas (menos de 800px) */
-@media (max-width: 800px) and (min-width: 200px) {
-
-    #physiotherapist-services{
-        height: 1200px;
-    }
-
-    #physiotherapist-services .box{
-        width: 500px;
-        display: table-column;
-        align-content: start;
-    }
-
-    #physiotherapist-services .container {
-        align-items: center;
-        justify-content: center;
-    }
-    #physiotherapist-services .right{
-
-    }
-
-    #physiotherapist-services .right img {
-        margin-top: 50px;
-        width: 300px; /* Ajusta el tamaño de la imagen al ancho de la pantalla */
-        height: 350px;
-        border-radius: 20px;
-
-    }
-
-    #physiotherapist-services .left {
-      width: 300px;
-    }
-
-    #physiotherapist-services .left .title{
-        font-size:35px;
-
-    }
-
-
-    #physiotherapist-services .btn-rectangular {
-
-        width: 70px;
-        height:20px;
-        font-size: 14px;
-
-    }
-
-    /* Estilos para los elementos expandibles */
-    .expanding-item {
-        width: 400px; /* Ajusta el ancho de los elementos expandibles */
-        padding: 10px;
-    }
-
-    .expand-button {
-        margin-left: auto; /* Mueve el botón al extremo derecho */
-
     }
 }
 
@@ -1450,6 +2231,302 @@ section h1.title
 }
 
 
+@media screen and (max-width: 699px) {
+
+
+    #doco-views .btn-rectangular{
+
+        width: 100px;
+        font-size: 15px;
+        text-align: center;
+
+    }
+
+    #doco-views .text h1{
+        font-size: 45px;
+        font-weight: bold;
+        padding-bottom: 10px;
+        color: purple;
+    }
+    #doco-views .contents {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #doco-views .img {
+        display: flex;
+        justify-content: center;
+    }
+
+    #doco-views div.img {
+        flex-direction: row;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    #doco-views .image-1 img{
+        width: 200px;
+        height: auto;
+        margin-top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+        
+    
+    }
+    
+    #doco-views .image-1{
+        margin-top: 40px;
+    }
+
+    #doco-views .image-2 img{
+    display: none;
+    }
+
+    #doco-views .image-3 {
+        display: none;
+    }
+
+    #doco-views .img{
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        margin-left: 150px;
+    }
+
+
+}
+
+@media screen and (max-width: 999px) and (min-width:700px){
+
+
+    #doco-views .btn-rectangular{
+
+        width: 120px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+
+    }
+    #doco-views .contents {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+  
+    #doco-views .image-1 img{
+        display: none;
+    
+    }
+    #doco-views .text{
+        justify-content: center;
+        align-items: center;
+        
+    
+    }
+
+    #doco-views .text .title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+    
+    }
+
+    #doco-views .text .description {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     
+    
+    }
+    #doco-views .image-1{
+        margin-top: 40px;
+    }
+
+
+
+    #doco-views .text h1{
+        font-size: 45px;
+        font-weight: bold;
+        padding-bottom: 10px;
+        color: yellow;
+    }
+    
+
+
+    #doco-views .img{
+        display: flex;
+        flex-direction: row;
+        margin-top: 10;
+        margin-bottom: 20px;
+        margin-left: 0;
+    }
+    
+
+    #doco-views .image-1 img{
+        width: 200px;
+        height: auto;
+        margin-top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+        
+    
+    }
+
+
+    #doco-views .download-buttons{
+        margin-bottom: 10px;
+    
+    }
+
+    #doco-views .image-2 {
+        display: none;
+    }
+
+    #doco-views .image-3 {
+        display: none;
+    }
+
+    #doco-views .img{
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        margin-left: 150px;
+    }
+
+
+
+}
+
+@media screen and (max-width: 1299px) and (min-width: 1000px){
+
+
+    #doco-views.btn-rectangular{
+
+        width: 120px;
+        font-size: 20px;
+        text-align: center;
+
+    }
+
+    #doco-views .image-1 img{
+        margin-top: 100px;
+        width:200px;
+        height:400px;
+    
+    }
+    #doco-views.text{
+        width:300px;
+        margin-top: 20px;
+    
+    }
+
+    #doco-views .text h1{
+        font-size: 45px;
+        font-weight: bold;
+        padding-bottom: 50px;
+        color: green;
+    }
+    
+    #doco-views.text h2{
+        font-weight: 800;
+        font-size: 25px;
+        padding-bottom: 20px;
+    }
+
+    #doco-views .img{
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 30px;
+    }
+    
+
+    #doco-views.image-2 img{
+        width: auto;
+        height: auto;
+
+    }
+
+    
+
+
+
+
+}
+
+
+@media screen and (max-width: 1500px) and (min-width: 1300px) {
+
+
+    #doco-views .btn-rectangular{
+
+        width: 150px;
+        font-size: 25px;
+        text-align: center;
+
+    }
+
+    #doco-views.image-1 img{
+        margin-top: 100px;
+        width:230px;
+        height:400px;
+    
+    }
+    #doco-views .text{
+        width:500px;
+        margin-top: 20px;
+    
+    }
+
+    #doco-views .text h1{
+        font-size: 60px;
+        font-weight: bold;
+        padding-bottom: 50px;
+        color: red;
+    }
+    
+    #doco-views .text h2{
+        font-weight: 800;
+        font-size: 25px;
+        padding-bottom: 20px;
+    }
+
+    #doco-views .img{
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 30px;
+    }
+    
+
+    #doco-views .image-2 img{
+        width: auto;
+        height: auto;
+
+    }
+
+    
+
+
+
+
+}
+
+
 /*Pricing*/
 /* Estilos para las tarjetas de precios */
 .titles .buttons {
@@ -1478,7 +2555,7 @@ section h1.title
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%; /* Ajusta según tus necesidades */
+    width: auto; /* Ajusta según tus necesidades */
 
 }
 
@@ -1557,7 +2634,7 @@ section h1.title
     border-radius: 10px;
     box-shadow: 0 16px 32px rgba(12, 10, 10, 0.4); /* Ajusta los valores para una sombra más fuerte */
     padding: 20px;
-    width: 260px;
+    width: 230px;
     margin: 10px 0;
     transition: transform 0.3s;
 }
@@ -1642,8 +2719,12 @@ section h1.title
 
 @media (max-width: 800px) {
     .pricing-card {
-        width: 100%;
+        width: auto;
         margin-bottom: 20px;
+    }
+
+    .separator{
+        width:10px
     }
 }
 
@@ -1949,9 +3030,9 @@ section h1.title
         height: 18px;
     }
 
-    #about-team iframe {
-        height: 150px; /* Ajusta el tamaño del iframe */
-        width: 300px;
+
+    iframe {
+        width: 90%;
     }
 }
 
